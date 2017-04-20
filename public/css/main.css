@@ -1,0 +1,70 @@
+@charset "UTF-8";
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.0rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', '\6E38\30B4\30B7\30C3\30AF    Medium', meiryo, sans-serif;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+a {
+  position: relative;
+  display: block;
+  background-image: url(public/img/sprite.png);
+  background-position: 0px -512px;
+  width: 200px;
+  height: 200px;
+}
+
+a[target=_blank] {
+  padding-right: 12px;
+  position: relative;
+}
+
+a[target=_blank]:before, a[target=_blank]:after {
+  margin: auto;
+  width: .8rem;
+  height: .7rem;
+  content: "";
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: 1px;
+  background: #ffffff;
+}
+
+a[target=_blank]:before {
+  right: .2rem;
+  top: .3rem;
+  bottom: 0;
+}
+
+a[target=_blank]:after {
+  right: 0;
+  top: -.1rem;
+  bottom: 0;
+  border-top-width: 0.2rem;
+}
+
+a[target=_blank]:link {
+  color: #ffffff;
+}
+
+a[target=_blank]:link:before, a[target=_blank]:link:after {
+  border-color: #ffffff;
+}
+
+a[target=_blank]:visited {
+  color: #ffffff;
+}
+
+a[target=_blank]:visited:before, a[target=_blank]:visited:after {
+  border-color: #000000;
+}

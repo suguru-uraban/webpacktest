@@ -1,0 +1,62 @@
+// main.scss
+@charset "utf-8";
+
+@import "sprite";
+
+//初期設定
+html {
+    font-size: 62.5%;
+}
+body {
+    font-size: 1.0rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', '游ゴシック  Medium', meiryo, sans-serif;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+a {
+    position: relative;
+    display: block;
+    @include sprite($img02);
+    &[target=_blank] {
+        padding-right: 12px;
+        position: relative;
+        &:before, &:after {
+            margin: auto;
+            width: .8rem;
+            height: .7rem;
+            content: "";
+            display: block;
+            position: absolute;
+            box-sizing: border-box;
+            border-style: solid;
+            border-width: 1px;
+            background: #ffffff;
+        }
+        &:before {
+            right: .2rem;
+            top: .3rem;
+            bottom: 0
+        }
+        &:after {
+            right: 0;
+            top: -.1rem;
+            bottom: 0;
+            border-top-width: 0.2rem;
+        }
+        &:link {
+            color: #ffffff;
+            &:before, &:after {
+                border-color: #ffffff;
+            }
+        }
+        &:visited {
+            color: #ffffff;
+            &:before, &:after {
+                border-color: #000000;
+            }
+        }
+    }
+}
